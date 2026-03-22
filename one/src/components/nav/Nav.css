@@ -1,0 +1,13 @@
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    background: rgb(26, 255, 0);
+    padding: 20px;
+    margin: 0;
+    font-weight: bold;
+}
+nav a{
+    text-decoration: none;
+    color: #004b0a;
+}

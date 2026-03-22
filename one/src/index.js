@@ -1,0 +1,21 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './components/app/App';
+import data from './db.json';
+
+
+let title = "My site";
+let slogan = "I am learning React";
+let nav = {"Главная": "/index", "Новости": "/news", "О компании": "/about", "Магазин": "/shop", "Контакты": "/contacts"};
+let db = data.people;
+let copy = "Copyright - 2026";
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App title={title} slogan={slogan} navigation={nav} db={db} text={copy} />
+  </React.StrictMode>
+);
+
+
