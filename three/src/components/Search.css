@@ -1,0 +1,30 @@
+.search{
+    margin: 20px 50px 0;
+}
+
+.search input{
+    padding: 20px 10px 10px;
+    border: none;
+    width: 100%;
+    color: #999;
+    font-size: 20px;
+}
+
+.search input:focus{
+    outline: none;
+    border-bottom: 1px solid #999;
+}
+
+.radio{
+    margin: 20px 50px 0;
+}
+
+.radio label{
+    margin-right: 60px;
+    font-size: 20px;
+}
+
+.radio input{
+    width: 16px;
+    height: 16px;
+}
