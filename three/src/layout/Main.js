@@ -7,32 +7,35 @@ import Search from '../components/Search';
 
 class Main extends React.Component {
     state = {
-        movies: []
+        movies: [],
+        loading: true,
+        count: 0
     }
 
     componentDidMount() {
         fetch('https://www.omdbapi.com/?apikey=4eb9d7fd&s=matrix')
             .then(response => response.json())
-            .then(data => this.setState({movies: data.Search}))
+            .then(data => this.setState({ movies: data.Search, loading: false, count: data.totalResults }))
     }
 
-    searchMovies = (str) => {
-         fetch(`https://www.omdbapi.com/?apikey=4eb9d7fd&s=${str}`)
+    searchMovies = (str, type = 'all', page) => {
+        this.setState({ loading: true })
+        fetch(`https://www.omdbapi.com/?apikey=4eb9d7fd&s=${str}${type !== 'all' ? `&type=${type}` : ''}${`&page=${page}`}`)
             .then(response => response.json())
-            .then(data => this.setState({movies: data.Search}))
+            .then(data => this.setState({ movies: data.Search, loading: false, count: data.totalResults }))
     }
 
     render() {
-        // console.log(this.state.movies);
-        const {movies} = this.state;
-        
+        // console.log(this.state.count);
+        const { movies, loading, count } = this.state;
+
         return (
             <div className="main">
                 <div className="wrap">
-                    <Search searchMovies={this.searchMovies} />
+                    <Search searchMovies={this.searchMovies} totalCount={count} />
                     {
-                        movies.length ? <MovieList movies={movies} /> : <Preloader />
-                    }                    
+                        loading ? <Preloader /> : <MovieList movies={movies} />
+                    }
                 </div>
             </div>
         )
