@@ -1,0 +1,40 @@
+ul{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  list-style: none;
+  font-weight: bold;
+}
+li{
+  margin-right: 20px;
+}
+h1, h2, h3{
+  text-align: center;
+}
+
+.my{
+  color: blue;
+}
+
+.active{
+  color: red;
+}
+
+.orange{
+  color: orange;
+}
+
+.content{
+  width: 500px;
+  margin: auto;
+}
+
+.but{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 0 12px 2px #999;
+  padding: 10px;
+  font-weight: bold;
+  color: blue;
+}

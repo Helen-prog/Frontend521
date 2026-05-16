@@ -40,17 +40,24 @@
 // console.log(fil);
 
 
-let user = {
-    login: {
-        firstName: "Kate",
-        lastName: "Pavlova"
-    },
-    password: 'qwerty',
-    role: 'guest'
-}
+// let user = {
+//     login: {
+//         firstName: "Kate",
+//         lastName: "Pavlova"
+//     },
+//     password: 'qwerty',
+//     role: 'guest'
+// }
 
-// let login = user.login
-// console.log(login);
+// // let login = user.login
+// // console.log(login);
 
-let {login: {firstName: f, lastName: l}, ...rest} = user;
-document.writeln(f + " " + l + " " + rest.password + " " + rest.role);
+// let {login: {firstName: f, lastName: l}, ...rest} = user;
+// document.writeln(f + " " + l + " " + rest.password + " " + rest.role);
+
+// let firstName = [];
+// console.log(typeof firstName);
+
+
+const u = 4;
+u = 7;

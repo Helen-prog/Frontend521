@@ -12,9 +12,6 @@ function Form(props){
 
     return (
         <div>
-            {
-                console.log(value)
-            }
             <form onSubmit={sendSubmit}>
                 <input 
                     type="text"
