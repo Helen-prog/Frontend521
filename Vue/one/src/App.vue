@@ -1,18 +1,21 @@
 <template>
-  <HeaderTop />
-  <ListItems />
+  <!-- <HeaderTop />
+  <ListItems /> -->
+  <DirectiveStart />
 </template>
 
 <script>
-import HeaderTop from './components/HeaderTop.vue';
-import ListItems from './components/ListItems.vue';
+import DirectiveStart from './components/DirectiveStart.vue';
+// import HeaderTop from './components/HeaderTop.vue';
+// import ListItems from './components/ListItems.vue';
 
 
 export default {
   name: 'App',
   components: {
-    HeaderTop,
-    ListItems
+    // HeaderTop,
+    // ListItems
+    DirectiveStart
   }
 }
 </script>
