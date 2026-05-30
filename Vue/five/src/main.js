@@ -21,13 +21,15 @@ const app = createApp(App)
 
 const ru = {
     app: {
-        title: 'Как работают плагины во Vue'
+        title: 'Как работают плагины во Vue',
+        changeBtn: 'Переключить язык'
     }
 }
 
 const en = {
     app: {
-        title: 'How plagins in Vue'
+        title: 'How plagins in Vue',
+        changeBtn: 'Toggle Language'
     }
 }
 // .mixin(alertMixin)

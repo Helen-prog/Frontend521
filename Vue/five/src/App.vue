@@ -3,22 +3,36 @@
     <div class="card">
       <h2>{{ $translate('app.title') }}</h2>
 
-      <button @click="changeLang">Переключить язык</button>
+      <button @click="changeLang">{{ $translate('app.changeBtn') }}</button><br><br>
 
-      <button @click="$alert('Работает')">Alert</button>
+      <!-- <button @click="$alert('Работает')">Alert</button> -->
+
+      <button @click="modal=true">Открыть окно</button>
+      <app-modal 
+        v-if="modal"
+        @close="modal = false"
+      ></app-modal>
     </div>
   </div>
 </template>
 
 <script>
+import AppModal from './components/AppModal.vue';
+
 export default {
+  data(){
+    return {
+      modal: false
+    }
+  },
   inject: ['language'],
   methods: {
     changeLang(){
       this.language('en')
       this.$forceUpdate()
     }
-  }
+  },
+  components: {AppModal}
 }
 </script>
 
